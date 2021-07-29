@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Search = ({ search, onSearchChange }) => {
+const Search = ({ search, onSearchChange, onSubmit }) => {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <label htmlFor="articleSearch">
         <input
           id="articleSearch"
@@ -13,7 +13,6 @@ const Search = ({ search, onSearchChange }) => {
           onChange={onSearchChange}
           value={search}
         >
-
         </input>
       </label>
       <button >Search!</button>
@@ -23,7 +22,8 @@ const Search = ({ search, onSearchChange }) => {
 
 Search.propTypes = {
   search: PropTypes.string.isRequired,
-  onSearchChange: PropTypes.func.isRequired
+  onSearchChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
 }; 
 
 export default Search;

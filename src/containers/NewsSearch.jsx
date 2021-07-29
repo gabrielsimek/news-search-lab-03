@@ -16,12 +16,22 @@ export default class NewsSearch extends Component {
     handleSearchChange = ({ target }) => {
       this.setState({ search: target.value });
     }
+
+    handleSearchSubmit = (e) => {
+      e.preventDefault();
+      console.log(this.state.search);
+    }
+
     render() {
       const { articles, loading, search } = this.state;
       if(loading) return <h1>Loading...</h1>;
       return (
         <>
-          <Search onSearchChange={this.handleSearchChange} search={search}/>
+          <Search 
+            search={search}
+            onSearchChange={this.handleSearchChange} 
+            onSubmit={this.handleSearchSubmit}  
+          />
           <ArticleList articles={articles}/>
         </>
       );

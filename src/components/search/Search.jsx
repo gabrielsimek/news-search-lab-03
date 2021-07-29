@@ -7,6 +7,8 @@ const Search = ({ search, onSearchChange, onSubmit }) => {
     <form onSubmit={onSubmit}>
       <label htmlFor="articleSearch">
         <input
+          placeholder="search"
+          data-testid="search-input"
           id="articleSearch"
           type="text"
           name="articleSearch"
@@ -15,7 +17,7 @@ const Search = ({ search, onSearchChange, onSubmit }) => {
         >
         </input>
       </label>
-      <button >Search!</button>
+      <button data-testid="search-button">Search!</button>
     </form>
   );
 };

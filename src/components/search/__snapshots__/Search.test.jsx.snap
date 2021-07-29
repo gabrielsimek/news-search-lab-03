@@ -7,13 +7,17 @@ exports[`Search component renders Search 1`] = `
       for="articleSearch"
     >
       <input
+        data-testid="search-input"
         id="articleSearch"
         name="articleSearch"
+        placeholder="search"
         type="text"
         value=""
       />
     </label>
-    <button>
+    <button
+      data-testid="search-button"
+    >
       Search!
     </button>
   </form>

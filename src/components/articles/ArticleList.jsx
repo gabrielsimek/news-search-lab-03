@@ -24,8 +24,7 @@ ArticleList.propTypes = {
       description: PropTypes.string,
       url: PropTypes.string,
       image: PropTypes.string,
-      publishedAt: PropTypes.string,
-      content: PropTypes.string,  
+      publishedAt: PropTypes.string
     })
   )
 };

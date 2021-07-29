@@ -10,25 +10,26 @@ const Article =
       <img 
         src={image}/>
       <h2>{author}</h2>
+      <p>{publishedAt}</p>
       <h2>{source}</h2>
       <h3>{description}</h3>
-      <p>{content}</p>
-      <p>{url}</p>
-      <p>{publishedAt}</p>
+      {/* <p>{content}</p> */}
+      <a href={url}>To Article</a>
+      
     </li>
   );
  
 };
 
 Article.propTypes = {
-  source: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  source: PropTypes.string,
+  author: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  url: PropTypes.string,
+  image: PropTypes.string,
+  publishedAt: PropTypes.string,
+  content: PropTypes.string,
 };
 
 export default Article;

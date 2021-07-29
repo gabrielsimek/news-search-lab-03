@@ -2,11 +2,11 @@ li {
     list-style: none;
     border: 1px solid black;
     padding: 15px;
-    width: 200px;
+    width: 400px;
 }
 
 li img {
-    width: 200px;
+    width: 400px;
     height: 100px;
     object-fit: contain;
 }

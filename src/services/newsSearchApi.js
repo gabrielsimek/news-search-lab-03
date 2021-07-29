@@ -9,9 +9,17 @@ const fetchTopArticles = async () => {
 };
 
 const fetchBySearchTerm = async (searchTerm) => {
-  const res = await fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWS_API_KEY}`);
+  const res = await fetch(`https://newsapi.org/v2/everything?q=${searchTerm} &page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const json = await res.json();
   return mungeArticles(json);
 };
 
-export  { fetchTopArticles, fetchBySearchTerm };
+const fetchByPage = async (searchTerm, page) => {
+  const res = await fetch(`https://newsapi.org/v2/everything?q=${searchTerm}
+  &page=${page}&apiKey=${process.env.NEWS_API_KEY}`);
+  const json = await res.json();
+  return mungeArticles(json);
+
+};
+
+export  { fetchTopArticles, fetchBySearchTerm, fetchByPage };

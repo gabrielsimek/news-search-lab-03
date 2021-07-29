@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/articles/ArticleList';
 import Search from '../components/search/Search';
-import fetchTopArticles  from '../services/newsSearchApi';
+import { fetchTopArticles, fetchBySearchTerm }  from '../services/newsSearchApi';
 export default class NewsSearch extends Component {
     state = {
       articles: [],
@@ -17,9 +17,10 @@ export default class NewsSearch extends Component {
       this.setState({ search: target.value });
     }
 
-    handleSearchSubmit = (e) => {
+    handleSearchSubmit = async (e) => {
       e.preventDefault();
-      console.log(this.state.search);
+      const articles = await fetchBySearchTerm(this.state.search);
+      this.setState({ articles });
     }
 
     render() {

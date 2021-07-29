@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component renders Search 1`] = `
+<DocumentFragment>
+  <form>
+    <label
+      for="articleSearch"
+    >
+      <input
+        data-testid="search-input"
+        id="articleSearch"
+        name="articleSearch"
+        placeholder="search"
+        type="text"
+        value=""
+      />
+    </label>
+    <button
+      data-testid="search-button"
+    >
+      Search!
+    </button>
+  </form>
+</DocumentFragment>
+`;

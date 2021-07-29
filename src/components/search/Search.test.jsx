@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import App from './App';
-
-describe('App component', () => {
+import Search from './Search';
+describe('Search component', () => {
   afterEach(() => cleanup());
-  it('renders App', () => {
-    const { asFragment } = render(<App />);
+  it('renders Search', () => {
+    const { asFragment } = render(<Search />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

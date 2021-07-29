@@ -28,3 +28,5 @@ ArticleList.propTypes = {
     })
   )
 };
+
+export default ArticleList;

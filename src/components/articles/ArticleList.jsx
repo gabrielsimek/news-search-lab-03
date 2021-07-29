@@ -18,14 +18,14 @@ const ArticleList = ({ articles }) => {
 ArticleList.propTypes = {
   articles: PropTypes.arrayOf(
     PropTypes.shape({
-      source: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      publishedAt: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,  
+      source: PropTypes.string,
+      author: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      url: PropTypes.string,
+      image: PropTypes.string,
+      publishedAt: PropTypes.string,
+      content: PropTypes.string,  
     })
   )
 };

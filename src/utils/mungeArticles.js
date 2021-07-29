@@ -7,8 +7,7 @@ export default function mungeArticles(articles){
       description: article.description,
       url: article.url,
       image: article.urlToImage,
-      publishedAt: article.publishedAt,
-      content: article.content
+      publishedAt: article.publishedAt
     };
   });
 }

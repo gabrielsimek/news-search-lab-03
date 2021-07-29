@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Article from './Article';
+import './ArticleList.css';
 
 const ArticleList = ({ articles }) => {
+  console.log('list', articles);
   const articleItems = articles.map(article => {
     return (
       <Article

@@ -1,5 +1,5 @@
 import React from 'react';
-import { , fireEvent,  render, screen } from '@testing-library/react';
+import { fireEvent,  render, screen } from '@testing-library/react';
 import NewsSearch from './NewsSearch';
 import Search from '../components/search/Search';
 import userEvent from '@testing-library/user-event';
